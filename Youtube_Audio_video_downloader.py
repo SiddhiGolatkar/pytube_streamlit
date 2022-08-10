@@ -1,17 +1,15 @@
 import streamlit as st
 import pandas as pd
-from pytube import YouTube, helpers
+from pytube import YouTube
 import youtube_dl
 import base64
 from io import BytesIO
-from pathlib import Path
 
 def main():
     path = st.text_input('Enter URL of youtube video')
     option = st.selectbox('select type of download', ('audio', 'video'))
     # matches = ['audio', 'video'] 
-    downloads_path = str(Path.home() / "Downloads")
-    if st.button("download"): 
+    if st.button("download", data=path): 
         video_object =  YouTube(path)
         st.write("Title of Video: " + str(video_object.title))
         st.write("Number of Views: " + str(video_object.views))
@@ -31,7 +29,7 @@ def main():
             st.write("Audio downloaded")	
             #base64.b64encode("if file is too large").decode()	
         elif option=='video':
-            video_object.streams.get_highest_resolution().download(output_path=downloads_path)
+            video_object.streams.get_highest_resolution().download()
             st.write("Video downloaded") 
 
     if st.button("view"): 
