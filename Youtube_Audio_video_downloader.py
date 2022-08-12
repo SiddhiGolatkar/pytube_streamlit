@@ -1,9 +1,15 @@
 import streamlit as st
 import pandas as pd
-from pytube import YouTube
+from pytube import YouTube, helpers
 import youtube_dl
 import base64
 from io import BytesIO
+
+proxy_handler = {
+    "http": "192.168.0.6:8501",
+    'https': '192.168.0.6:8501'
+}
+helpers.install_proxy(proxy_handler)
 
 def main():
     path = st.text_input('Enter URL of youtube video')
