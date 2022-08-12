@@ -6,11 +6,6 @@ import base64
 from io import BytesIO
 from pytube.helpers import install_proxy
 
-proxy_handler = {
-    "http": "127.0.0.1:20304",
-    'https': '127.0.0.1:20304'
-}
-helpers.install_proxy(proxy_handler)
 
 def main():
     path = st.text_input('Enter URL of youtube video')
