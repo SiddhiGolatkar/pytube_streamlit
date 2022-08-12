@@ -4,10 +4,11 @@ from pytube import YouTube, helpers
 import youtube_dl
 import base64
 from io import BytesIO
+from pytube.helpers import install_proxy
 
 proxy_handler = {
-    "http": "192.168.0.6:8501",
-    'https': '192.168.0.6:8501'
+    "http": "127.0.0.1:20304",
+    'https': '127.0.0.1:20304'
 }
 helpers.install_proxy(proxy_handler)
 
