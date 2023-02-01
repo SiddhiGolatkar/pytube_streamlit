@@ -65,8 +65,7 @@ Pympler==1.0.1
 pyparsing==3.0.9
 pyrsistent==0.18.1
 python-dateutil==2.8.2
-pytube==12.1.2
-pytube3==9.6.4
+pytube @ git+https://github.com/pytube/pytube.git@d3d18691b3e99b2d3b4d620446b088a1c32896c6
 pytz==2022.1
 pytz-deprecation-shim==0.1.0.post0
 pyzmq==23.2.0
