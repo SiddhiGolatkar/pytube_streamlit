@@ -63,7 +63,6 @@ pydeck==0.7.1
 Pygments==2.12.0
 Pympler==1.0.1
 pyparsing==3.0.9
-pypiwin32==223
 pyrsistent==0.18.1
 python-dateutil==2.8.2
 pytube==12.1.0
