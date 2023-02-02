@@ -5,9 +5,12 @@ import youtube_dl
 import base64
 from io import BytesIO
 from pytube.helpers import install_proxy
+import os
 
 
 def main():
+    SAVE_PATH = '/'.join(os.getcwd().split('/')) 
+
     path = st.text_input('Enter URL of youtube video')
     option = st.selectbox('select type of download', ('audio', 'video'))
     # matches = ['audio', 'video'] 
@@ -29,10 +32,12 @@ def main():
 
             # video_object.streams.get_audio_only().download() 	
             st.write("Audio downloaded")	
+            st.write(SAVE_PATH)
             #base64.b64encode("if file is too large").decode()	
         elif option=='video':
             video_object.streams.get_highest_resolution().download()
             st.write("Video downloaded") 
+            st.write(SAVE_PATH)
 
     if st.button("view"): 
         st.video(path) 
