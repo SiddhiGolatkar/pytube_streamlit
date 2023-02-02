@@ -91,7 +91,10 @@ urllib3==1.26.11
 validators==0.20.0
 watchdog==2.1.9
 wcwidth==0.2.5
+web-youtube-dl==0.3.0
 webencodings==0.5.1
+websockets==10.4
+Werkzeug==1.0.1
 widgetsnbextension==3.6.1
 youtube-dl==2021.12.17
 zipp==3.8.1
